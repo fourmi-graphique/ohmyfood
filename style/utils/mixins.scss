@@ -1,0 +1,23 @@
+@mixin link {
+    text-decoration: none;
+    font-family: $txt;
+    color: $head-clr;
+}
+@mixin pretable {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+@mixin table {
+    table-layout: fixed;
+    width: 80%;
+    font-size: 1.4rem;
+    margin-bottom: 100px;
+    border-collapse: separate;
+    border-spacing: 30px;
+}
