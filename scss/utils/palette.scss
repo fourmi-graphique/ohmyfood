@@ -1,0 +1,90 @@
+.container__pal {
+        @include container;
+        background-color: #f9f9f9;
+}
+
+.menu__pal {
+        font-family: $txt-pal;
+        color: #008100;
+        background: linear-gradient(170deg, #008100, #BDFE80 70%);
+        -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 80px;
+        width: 100%;
+}
+.pretable__pal {
+         @include pretable;
+}
+.table__pal {
+         @include table;
+}
+
+
+//Media ecran cathodique
+@media (max-width: 992px) {
+        .container__pal {
+            width: 80%;
+        }
+        .menu__pal {
+                font-size: 5rem;
+        }
+        .pretable__pal {
+            font-size: 2.5rem;
+        }
+        .table__pal {
+            width: 90%;
+            font-size: 1.5rem;
+        }
+}
+    
+//Media tablette
+@media (max-width: 768px) {
+        .container__pal {
+                width: 80%;
+        }
+        .table__pal {
+                width: 80%;
+                font-size: 1.5rem;
+        }
+        .pretable__pal {
+                text-align: center;
+        }
+        .pretable__pal p {
+                text-align: center;
+        }
+}
+
+
+//Media Mobile
+@media (max-width: 576px) {
+        .container__pal {
+                width: 90%;
+        }
+        .menu__pal {
+               @include menu-mobile;
+               background: linear-gradient(140deg, #008100, #BDFE80 70%);
+               -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+        }
+        .pretable__pal {
+                @include pretable_mobile;
+        }
+        .table__pal {
+                margin-bottom: 50px;
+                td {
+                @include table_td-mobile;
+                }
+        }
+        .table__pal td:nth-child(2) {
+                @include table__nth-mobile;
+        }
+}
+@media (max-width: 375px) {
+        .container__pal {
+            width: 95%;
+        }
+}

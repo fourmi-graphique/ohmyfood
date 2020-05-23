@@ -1,0 +1,69 @@
+@mixin link {
+    text-decoration: none;
+    font-family: $txt;
+    color: $head-clr;
+}
+
+@mixin container {
+    margin: 30px auto;
+    font-family: $txt-menu;
+    width: 80%;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: $shdw;
+}
+
+@mixin pretable {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2.5rem;
+    text-align: center;
+    img {
+        width: 20%;
+    }
+}
+
+@mixin table {
+    table-layout: auto;
+    width: 70%;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+@mixin underline {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 1s;
+}
+
+@mixin menu-mobile {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+}
+@mixin pretable_mobile {
+    font-size: 1.8rem;
+    margin: auto;
+    width: 100%;
+    img {
+        width: 30%;
+    }
+}
+@mixin table_td-mobile {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
+}
+@mixin table__nth-mobile {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,146 @@
+.container__del {
+   @include container;
+   background-color: #f9f9f9;
+}
+.menu__del {
+    font-family: $txt-del;
+    font-size: 4rem;
+    color: #0038DF;
+    background: linear-gradient(170deg, #0038DF 40%, #008AF6 70%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 80px;
+    width: 100%;
+    text-align: center;
+}
+.pretable__del {
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            @include pretable;
+            color: #000;
+        }
+    }
+}
+.table__del {
+    color: #000;
+    &--1 {
+        @include table;
+    }
+    &--2 {
+        @include table;
+    }
+    &--3 {
+        @include table;
+    }
+}
+
+
+//Media ecran cathodique
+@media (max-width: 992px) {
+    .container__del {
+       width: 80%;
+    }
+    .menu__del {
+        font-size: 5rem;
+    }
+    .pretable__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                    font-size: 2.2rem;
+            }
+        }
+    }
+    .table__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                td {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+//Media tablette
+@media (max-width: 768px) {
+    .container__del {
+        width: 80%;
+    }
+    .menu__del {
+        font-size: 4rem;
+    }
+    .table__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                td {
+                    width: 80%;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .pretable_del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+            text-align: center;
+            p {
+                text-align: center;
+            }
+            }
+        }
+    }
+}
+
+
+//Media Mobile
+@media (max-width: 576px) {
+    .container__del {
+        width: 90%;
+    }
+    .menu__del {
+       @include menu-mobile;
+       background: linear-gradient(140deg, #0038DF 40%, #008AF6 70%);
+       -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+    }
+    .pretable__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                @include pretable_mobile;
+                width: 95%;
+            }
+        }
+    }
+    .table__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .table__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+            td {
+                @include table_td-mobile;
+                }
+            }
+        }
+    }
+    .table__del {
+        @for $i from 1 through 3 {
+            &--#{$i} {
+            td:nth-child(2) {
+                @include table__nth-mobile;
+                }
+            }
+        } 
+    }
+}
+@media (max-width: 375px) {
+    .container__del {
+        width: 95%;
+    }
+}

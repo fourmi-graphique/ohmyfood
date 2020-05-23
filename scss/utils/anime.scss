@@ -1,0 +1,201 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+
+.card {
+        transform: scale(1);
+        transition: .3s ease-in-out;
+        opacity: 1;
+        background-color: #fffFFF00;
+}
+.card:hover {
+    transform: scale(1.1);
+    opacity: .5;
+}
+
+
+// Wiggle
+.mention:hover {
+    -webkit-animation: wiggle 100ms ease-in-out 3;
+            animation: wiggle 100ms ease-in-out 3;
+}
+.contact:hover {
+    -webkit-animation: wiggle 100ms ease-in-out 3;
+            animation: wiggle 100ms ease-in-out 3;
+}
+
+@-webkit-keyframes wiggle {
+    0% { 
+        transform: rotate(5deg); 
+    }
+    80% { 
+        transform: rotate(-5deg); 
+    }
+    85% { 
+        transform: rotate(5deg); 
+    }
+    95% { 
+        transform: rotate(-5deg); 
+    }
+    100% { 
+        transform: rotate(0deg); 
+    }
+}
+
+@keyframes wiggle {
+    0% { 
+        transform: rotate(5deg); 
+    }
+    80% { 
+        transform: rotate(-5deg); 
+    }
+    85% { 
+        transform: rotate(5deg); 
+    }
+    95% { 
+        transform: rotate(-5deg); 
+    }
+    100% { 
+        transform: rotate(0deg); 
+    }
+}
+
+
+
+// Points
+.point--1 {
+    animation: points 900ms 200ms ease-in-out infinite alternate-reverse;
+}
+.point--2 {
+    animation: points 900ms 400ms ease-in-out infinite alternate-reverse;
+}
+.point--3 {
+    animation: points 900ms 600ms ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes points {
+    0% {
+        opacity: 0;
+      }
+    100% {
+        opacity: 1;
+      }
+}
+
+@keyframes points {
+    0% {
+        opacity: 0;
+      }
+    100% {
+        opacity: 1;
+      }
+}
+
+
+
+//Menu
+//Note
+.pretable__note p {
+    position: relative;
+}
+.pretable__note p:after {
+    @include underline;
+    border-bottom: 2px solid $clr-note;
+}
+.pretable__note p:hover:after {
+      width: 100%;
+}
+
+
+
+//Chic
+.pretable__chic--1 p {
+    position: relative;
+}
+.pretable__chic--1 p:after {
+    @include underline;
+    border-bottom: 2px solid #C67412;
+}
+.pretable__chic--1 p:hover:after {
+      width: 100%;
+}
+
+.pretable__chic--2 p {
+    position: relative;
+}
+.pretable__chic--2 p:after {
+    @include underline;
+    border-bottom: 2px solid #A56799;
+}
+.pretable__chic--2 p:hover:after {
+      width: 100%;
+}
+
+.pretable__chic--3 p {
+    position: relative;
+}
+.pretable__chic--3 p:after {
+    @include underline;
+    border-bottom: 2px solid #6E4CCC;
+}
+.pretable__chic--3 p:hover:after {
+      width: 100%;
+}
+
+
+
+//Delice
+.pretable__del--1 p {
+    position: relative;
+}
+.pretable__del--1 p:after {
+    @include underline;
+    border-bottom: 2px solid #0128DD;
+}
+.pretable__del--1 p:hover:after {
+      width: 100%;
+}
+
+.pretable__del--2 p {
+    position: relative;
+}
+.pretable__del--2 p:after {
+    @include underline;
+    border-bottom: 2px solid #0770F3;
+}
+.pretable__del--2 p:hover:after {
+      width: 100%;
+}
+
+.pretable__del--3 p {
+    position: relative;
+}
+.pretable__del--3 p:after {
+    @include underline;
+    border-bottom: 2px solid #229DF9;
+}
+.pretable__del--3 p:hover:after {
+      width: 100%;
+}
+
+
+
+//Palette
+.pretable__pal p {
+    position: relative;
+}
+.pretable__pal p:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #FFF;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(90deg, #008100, #BDFE80);
+    transition: 1s;
+}
+.pretable__pal p:hover:after {
+      width: 100%;
+}

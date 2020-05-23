@@ -1,0 +1,263 @@
+@import "./utils/reset.scss";
+@import "./utils/anime.scss";
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./utils/chic.scss";
+@import "./utils/note-enchant.scss";
+@import "./utils/delice.scss";
+@import "./utils/palette.scss";
+@import "./utils/mentions.scss";
+
+
+
+// Header
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bck-clr;
+    .logo {
+        a {
+            @include link;
+            font-size: 5rem;
+            letter-spacing: -4px;
+        }
+    }
+}
+
+// Body
+body {
+    margin-bottom: 100px;
+}    
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    &__content {
+        display: flex;
+        @for $i from 1 through 4{
+            &--#{$i} {
+            width: 400px;
+            height: 560px;
+            margin: 2rem;
+            border-radius: 20px;
+            }
+        }
+        &--1 {
+            background-color: #FEDFDB;
+            box-shadow: $shdw;
+            p {
+                font-family: $txt-note;
+                font-size: 2.5rem;
+                color: $clr-note;
+            }
+        }
+        &--2 {
+            background-color: #FDF5FD;
+            box-shadow: $shdw;
+            .nom--2 {
+                font-family: $txt-chic;
+                font-size: 1.8rem;
+                color: #d88922;
+                background: linear-gradient(170deg, #d88922 40%, #8762F4 60%);
+                -webkit-background-clip: text;
+                            background-clip: text;
+                -webkit-text-fill-color: transparent;
+            } 
+        }
+        &--3 {
+            background-color: #F9F9F9;
+            box-shadow: $shdw;
+            .nom--3 {
+                font-family: $txt-del;
+                font-size: 2.2rem;
+                color: #0038DF;
+                background: linear-gradient(170deg, #0038DF 40%, #008AF6 70%);
+                -webkit-background-clip: text;
+                        background-clip: text;
+                -webkit-text-fill-color: transparent;
+                width: 100%;
+            }
+        }
+        &--4 {
+            background-color: #FDFFFD;
+            box-shadow: $shdw;
+            .nom--4 {
+                font-family: $txt-pal;
+                font-size: 2.2rem;
+                width: 100%;
+                color: #008100;
+                background: linear-gradient(170deg, #008100, #BDFE80);
+                -webkit-background-clip: text;
+                        background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }    
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img {
+        width: 30%;
+        height: auto;
+    }
+    &__menu {
+        &--1 p{
+            font-family: $txt-menu;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        &--2 p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #BC771F;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+        &--3 p{
+            font-family: $txt-menu;
+            color: #3888F3;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+        &--4 p{
+            font-family: $txt-menu;
+            color: #82BB60;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+.soon__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    a {
+        display: flex;
+        font-family: $txt;
+        text-decoration: none;
+        color: $head-clr;
+        font-size: 1.8rem;
+        background-color: $bck-clr;
+        padding: 15px;
+        border-radius: 20px;
+        z-index: 1;
+    }
+    p {
+        margin-left: 2px;
+    }
+    .point--1 {
+        margin-left: 5px;
+    }
+} 
+
+// Page prochainement
+.proch {
+    width: 100vw;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 6rem;
+        font-family: $txt;
+        color: $head-clr;
+    }
+    .points {
+        display: flex;
+    }
+}
+
+// Footer
+footer {
+    z-index: 1;
+    width: 100vw;
+    height: 4vh;
+    padding: 2rem;
+    background-color: $bck-clr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    a {
+        @include link;
+    }
+}
+
+
+//Aligne horizontalement les tables
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+//Selection du deuxième td pour alignement texte à la fin
+td:nth-child(2) {
+    text-align: end;
+}
+// Td dessert des table
+.dessert {
+    margin-bottom: 0;
+}
+// Td 1
+td:nth-child(1) {
+    padding: 10px;
+}
+// Media Tablette
+@media only screen and (max-width: 768px) {
+    .menu__content {
+        display: block;
+    }
+    .proch {
+        p {
+            font-size: 4rem;
+        }
+    }
+}
+//Media Mobile
+@media (max-width: 576px) {
+    header {
+        .logo a{
+            font-size: 4rem;
+        }
+    }
+    .menu__content {
+        @for $i from 1 through 4{
+            &--#{$i} {
+            width: 300px;
+            height: 360px;
+            margin: 2rem;
+            }
+        }
+    }
+    .card {
+        .nom--2 {
+            background: linear-gradient(140deg, #d88922 40%, #8762F4 60%);
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    td {
+        width: 100%;
+    }
+    .proch {
+        p {
+            font-size: 2.5rem;
+        }
+    }
+}

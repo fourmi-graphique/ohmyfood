@@ -1,0 +1,27 @@
+.text-mentions {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    color: #1f614d;
+    a {
+        color: $head-clr;
+        font-weight: bold;
+    }
+}
+strong {
+   font-weight: bold;
+}
+.titre {
+    color: $head-clr;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    }
+.sous-titre p {
+    color: $head-clr;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}

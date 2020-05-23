@@ -1,0 +1,119 @@
+.container__note {
+    @include container;
+    background-color: #FEDFDB;
+    color: $clr-note;
+}
+.menu__note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $txt-note;
+    font-size: 3.5rem;
+    margin-bottom: 80px;
+    img {
+        width: 5%;
+    }
+}
+.pretable__note {
+    @include pretable;
+}
+.table__note {
+    @include table;
+}
+.fin p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: $txt-note;
+    font-size: 2rem;
+    margin-top: 20px;
+    img {
+        width: 2%;
+        margin-right: 10px;
+    }
+}
+
+//Media ecran cathodique
+@media (max-width: 992px) {
+    .container__note {
+        width: 80%;
+    }
+    .menu__note {
+        font-size: 5rem;
+        img {
+            width: 10%;
+        }
+    }
+    .pretable__note {
+        font-size: 2.2rem;
+    }
+    .table__note {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    .fin p{
+        img {
+            width: 3%;
+        }
+    } 
+}
+
+//Media tablette
+@media (max-width: 768px) {
+    .menu__note {
+        font-size: 3rem;
+    }
+    .pretable__note {
+        text-align: center;
+    }
+    .pretable__note p {
+        text-align: center;
+    }
+    .table__note {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .fin p{
+        img {
+            width: 5%;
+        }
+    }
+}
+
+
+//Media Mobile
+@media (max-width: 576px) {
+    .menu__note {
+        text-align: center;
+        @include menu-mobile;
+    }
+    .pretable__note {
+        @include pretable_mobile;
+    }
+    .table__note {
+        margin-bottom: 50px;
+    }
+    .table__note td {
+        @include table_td-mobile;
+    }
+    .table__note td:nth-child(2) {
+        @include table__nth-mobile;
+    }
+    .fin p {
+        img {
+            width: 5%;
+            height: auto;
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .container__note {
+        width: 95%;
+        img {
+            width: 20%;
+        }
+    }
+}
