@@ -39,7 +39,7 @@ body {
     align-items: center;   
     &__content {
         display: flex;
-        @for $i from 1 through 4{
+        @for $i from 1 through 4 {
             &--#{$i} {
             width: 400px;
             height: 560px;
@@ -65,7 +65,6 @@ body {
                 color: #d88922;
                 background: linear-gradient(170deg, #d88922 40%, #8762F4 60%);
                 -webkit-background-clip: text;
-                            background-clip: text;
                 -webkit-text-fill-color: transparent;
             } 
         }
@@ -78,7 +77,6 @@ body {
                 color: #0038DF;
                 background: linear-gradient(170deg, #0038DF 40%, #008AF6 70%);
                 -webkit-background-clip: text;
-                        background-clip: text;
                 -webkit-text-fill-color: transparent;
                 width: 100%;
             }
@@ -93,7 +91,6 @@ body {
                 color: #008100;
                 background: linear-gradient(170deg, #008100, #BDFE80);
                 -webkit-background-clip: text;
-                        background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
@@ -218,6 +215,8 @@ td:nth-child(2) {
 td:nth-child(1) {
     padding: 10px;
 }
+
+
 // Media Tablette
 @media only screen and (max-width: 768px) {
     .menu__content {
@@ -249,7 +248,6 @@ td:nth-child(1) {
         .nom--2 {
             background: linear-gradient(140deg, #d88922 40%, #8762F4 60%);
             -webkit-background-clip: text;
-                    background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     }

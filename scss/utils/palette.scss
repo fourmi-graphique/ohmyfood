@@ -8,8 +8,7 @@
         color: #008100;
         background: linear-gradient(170deg, #008100, #BDFE80 70%);
         -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
         font-size: 4rem;
         text-align: center;
         margin-bottom: 80px;
@@ -67,8 +66,9 @@
                @include menu-mobile;
                background: linear-gradient(140deg, #008100, #BDFE80 70%);
                -webkit-background-clip: text;
-                background-clip: text;
+               -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
         }
         .pretable__pal {
                 @include pretable_mobile;

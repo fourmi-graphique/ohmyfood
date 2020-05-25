@@ -8,7 +8,6 @@
     color: #0038DF;
     background: linear-gradient(170deg, #0038DF 40%, #008AF6 70%);
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 80px;
     width: 100%;
@@ -102,8 +101,7 @@
        @include menu-mobile;
        background: linear-gradient(140deg, #0038DF 40%, #008AF6 70%);
        -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
     }
     .pretable__del {
         @for $i from 1 through 3 {
